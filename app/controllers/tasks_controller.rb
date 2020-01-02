@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
   def index
-    render json: Task.all
+    render json: Task.order(:id)
   end
 
-    def update
+  def update
     task = Task.find(params[:id])
     task.update_attributes(task_params)
     render json: task
@@ -14,4 +14,5 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:done)
   end
+
 end
