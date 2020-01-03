@@ -194,6 +194,7 @@ body {
 .todo-list li .toggle {
     opacity: 0;
 }
+
 .todo-list li .toggle+label {
     /*
     Firefox requires `#` to be escaped - https://bugzilla.mozilla.org/show_bug.cgi?id=922433
